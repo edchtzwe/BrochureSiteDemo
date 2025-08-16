@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  This container uses Flexbox to arrange the icons 
+  horizontally with a gap between them.
+*/
+.contact-icons-container {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    align-items: center;
+    gap: 2.5rem;
+    /* The space between the icons */
+}
+
+/* 
+    This class is for the <a> tag.
+    It's set to inline-block to allow transformations.
+    The transition property makes the hover effect smooth.
+  */
+.social-icon-link {
+    display: inline-block;
+    transition: transform 0.6s ease-in-out;
+    /* Animation speed and timing */
+}
+
+/* 
+    This styles the actual SVG icon inside the link.
+    Set the size and color here.
+  */
+.social-icon-svg {
+    width: 80px;
+    /* Makes the icon "giant" */
+    height: 80px;
+    color: #333;
+    /* A dark grey color, change as you like */
+}
+
+/* 
+    This is the hover effect!
+    When you hover over the link, it applies this transform
+    to the entire link element (including the icon).
+  */
+.social-icon-link:hover {
+    transform: scale(1.15) rotate(360deg);
+    /* Grow 15% and do a full 360 spin */
+}
